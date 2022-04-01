@@ -1,46 +1,37 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Effect = () => {
-    const [num, setNum] = useState(1);
+
     const [count, setCount] = useState(1);
-    const [toggle, setToggle] = useState(false);
 
     useEffect(() => {
-        console.log("UseEffect Component Did Mount", num)
-    }, [])
+        console.log("Component Render On Everytime ", count)
+    });
 
+    // Did Mount
     useEffect(() => {
-        console.log("UseEffect Component Did Update", count)
-    }, [count])
+        console.log("Component Render On First Time ", count)
+    }, []);
 
+    // Did Update
     useEffect(() => {
-        console.log("UseEffect Component Did", toggle)
-        return () => console.log("I'm Removed In VDOM")
-    }, [count, num, toggle])
+        console.log("Component Render On Updated ", count)
+    }, [count]);
+
+    // Did UnMount
+    useEffect(() => {
+        return () => {
+            console.log("Component Render On Delete Component ")
+        }
+    });
 
     return (
         <div>
             <h1>
-                UseEffect
+                React UseEffect
             </h1>
-            <h1 className='heading'>{num}</h1>
-            <br />
-            <button className='button' onClick={() => {
-                setNum(num + 1)
-            }}>
-                Update Num
-            </button>
-            <br />
-            <button className='button' onClick={() => {
-                setCount(count + 1)
-            }}>
-                Update Count
-            </button>
-            <button className='button' onClick={() => {
-                setToggle(!toggle)
-            }}>
-                Update Toggle
-            </button>
+            <h3 className='heading'>{count}</h3>
+            <button className='button' onClick={() => setCount(count + 1)}>Update Effect</button>
         </div>
     )
 }
