@@ -27,10 +27,9 @@ const Effect = () => {
 
     return (
         <div>
-            <h1>
-                React UseEffect
-            </h1>
+            <h1>React UseEffect</h1>
             <h3 className='heading'>{count}</h3>
+            
             <button className='button' onClick={() => setCount(count + 1)}>Update Effect</button>
         </div>
     )
