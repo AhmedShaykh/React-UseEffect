@@ -21,15 +21,16 @@ const Effect = () => {
     // Did UnMount
     useEffect(() => {
         return () => {
-            console.log("Component Render On Delete Component ")
+            console.log("Component Render On Delete Component")
         }
     });
 
     return (
         <div>
-            <h1>React UseEffect</h1>
+            <h1>
+                React UseEffect
+            </h1>
             <h3 className='heading'>{count}</h3>
-            
             <button className='button' onClick={() => setCount(count + 1)}>Update Effect</button>
         </div>
     )

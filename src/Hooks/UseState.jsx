@@ -4,8 +4,9 @@ const State = () => {
     const [arr, setArr] = useState(["Tesla"]);
 
     const handleClick = () => {
-        setArr([...arr, "SpaceX", "Bitcoin", "StarLink", "Dogecoin"]);
+        setArr([...arr, "SpaceX", "Bitcoin", "StarLink", "Twitter"]);
     }
+
     return (
         <div className='App'>
             <h1>React Hooks</h1>
