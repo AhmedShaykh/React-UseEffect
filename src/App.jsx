@@ -1,6 +1,6 @@
 import React from 'react';
-import Effect from './Hooks/Effect';
-import State from './Hooks/State';
+import Effect from './Hooks/UseEffect';
+import State from './Hooks/UseState';
 import './App.css';
 
 function App() {
