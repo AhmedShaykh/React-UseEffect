@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
 import Effect from './Hooks/Effect';
 import State from './Hooks/State';
+import './App.css';
 
 function App() {
   return (
