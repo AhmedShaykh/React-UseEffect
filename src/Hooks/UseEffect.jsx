@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const About = () => {
+const Effect = () => {
 
     const [count, setCount] = useState(1);
 
@@ -21,7 +21,7 @@ const About = () => {
     // Did UnMount
     useEffect(() => {
         return () => {
-            console.log("Component Render On Delete Component")
+            console.log("Component Render On Delete Component! ", count)
         }
     }, []);
 
@@ -36,4 +36,4 @@ const About = () => {
     )
 }
 
-export default About;
+export default Effect;
