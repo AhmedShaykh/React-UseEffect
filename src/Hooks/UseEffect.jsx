@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const Effect = () => {
+const About = () => {
 
     const [count, setCount] = useState(1);
 
@@ -23,7 +23,7 @@ const Effect = () => {
         return () => {
             console.log("Component Render On Delete Component")
         }
-    });
+    }, []);
 
     return (
         <div>
@@ -36,4 +36,4 @@ const Effect = () => {
     )
 }
 
-export default Effect;
+export default About;
